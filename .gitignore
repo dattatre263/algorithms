@@ -1,0 +1,19 @@
+# Gradle output
+build
+
+# Maven output
+target/
+
+# Eclipse files
+/.project
+/.pydevproject
+/.classpath
+/.gradle
+
+# intellij idea files
+.idea
+*.iml
+out
+
+# Mac files
+.DS_store
