@@ -3,6 +3,7 @@ package algospecialization.divideandconquer.week3;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 public class QuickSortV1 {
 
@@ -30,7 +31,10 @@ public class QuickSortV1 {
     System.out.println(high.getComparisionCount());
 
     QuickSortV1 median = new QuickSortV1(primitiveArray, 2);
+    long startTime = System.nanoTime();
     System.out.println(median.getComparisionCount());
+    long endTime = System.nanoTime();
+    System.out.println((endTime - startTime));
   }
 
   QuickSortV1(int[] input, int strategy) {
