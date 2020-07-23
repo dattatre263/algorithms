@@ -24,7 +24,7 @@ public class MinimumCut {
     Path path = Paths.get(args[0]);
     long lineCount = Files.lines(path).count();
     int answer = Integer.MAX_VALUE;
-    for (int j = 1; j < 50; j++) {
+    for (int j = 1; j < 100; j++) {
       Graph graph = new Graph(Math.toIntExact(lineCount));
       Files.lines(Paths.get(args[0]))
           .forEach(
