@@ -2,49 +2,60 @@ package leetcode.dynamic;
 
 public class LongestPalindromicSubstring {
   Boolean[][] matrix;
-  String s;
   String ans = "";
 
   public String longestPalindrome(String s) {
-    this.s = s;
-    matrix = new Boolean[s.length()][s.length()];
-    if(s == null || s.length() == 0) return ans;
-    ans = s.substring(0,1);
-    for (int i = 0; i < s.length(); i++) {
-      matrix[i][i] = true;
+    if(s == null) return null;
+    if(s.length() == 1) return s;
+    if(s.length() == 2){
+      return s.charAt(0) == s.charAt(1) ? s : s.substring(0,1);
     }
-    isPal(0, s.length() -1);
+    matrix = new Boolean[s.length()][s.length()];
+    solveBaseCase(s);
+    recurse(s,0,s.length() -1);
     return ans;
   }
 
-  private boolean isPal(int i, int j) {
-    if (matrix[i][j] != null) return matrix[i][j];
-    if((j - i) == 0 ) {
-      return matrix[i][j];
+  private void solveBaseCase(String s) {
+    ans = s.substring(0,1);
+    for (int i = 0, j = 0; i < s.length() ; i++, j++) {
+      matrix[i][j] = true;
     }
-    if((j-i) == 1){
-      if (s.charAt(i) == s.charAt(j)){
-        if(s.substring(i,j+1).length() > ans.length()){
-          ans = s.substring(i,j+1);
-        }
+    for (int i = 0, j = i+1; j < s.length(); i++,j++) {
+      if(s.charAt(i) == s.charAt(j)){
         matrix[i][j] = true;
-      }else{
+        ans = s.substring(i,j+1);
+      }else {
         matrix[i][j] = false;
       }
-      return matrix[i][j];
     }
-    matrix[i][j] = s.charAt(i) == s.charAt(j) & isPal(i+1, j-1);
-    if(matrix[i][j] && s.substring(i,j+1).length() > ans.length()){
-      ans = s.substring(i,j+1);
+  }
+
+  private boolean recurse(String s, int i, int j) {
+    //base case
+    if(matrix[i][j] != null) return matrix[i][j];
+    // case 1
+    boolean case1 = (j-1)-(i-1) > 0 && recurse(s,i+1, j-1) && s.charAt(i) == s.charAt(j) ;
+    if(case1){
+      String temp = s.substring(i,j+1);
+      ans = temp.length() > ans.length() ? temp : ans;
+      matrix[i][j] = true;
+    }else {
+      matrix[i][j] = false;
+      if(j-1-i > 0 ){
+        recurse(s,i, j-1);
+      }
+      if(j-i+1 > 0) {
+        recurse(s,i+1, j);
+      }
     }
-    isPal(i,j-1);
-    isPal(i+1, j);
     return matrix[i][j];
   }
 
+
   public static void main(String[] args) {
     LongestPalindromicSubstring longestPalindromicSubstring = new LongestPalindromicSubstring();
-    String ans = longestPalindromicSubstring.longestPalindrome("abcdefedcba");
+    String ans = longestPalindromicSubstring.longestPalindrome("aaaabbaa");
     System.out.println(ans);
   }
 }

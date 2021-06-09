@@ -36,8 +36,9 @@ public class MergeSort {
     int j = mid + 1;
     for (int k = lo; k <= hi; k++) {
       if (i > mid) {
+        // just copy right side
         array[k] = aux[j++];
-      } else if (j > i) {
+      } else if (j > hi) {
         array[k] = aux[i++];
       } else if (aux[i] < aux[j]) {
         array[k] = aux[i++];
