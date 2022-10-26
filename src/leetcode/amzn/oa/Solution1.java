@@ -1,13 +1,7 @@
 package leetcode.amzn.oa;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.PriorityQueue;
-import org.omg.CORBA.INTERNAL;
+import java.util.*;
 
 public class Solution1 {
 

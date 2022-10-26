@@ -1,11 +1,6 @@
 package leetcode.amzn.mock.seven;
 
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Queue;
+import java.util.*;
 
 public class Solution2 {
   int N = 0;

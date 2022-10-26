@@ -1,6 +1,5 @@
 package google.foobar;
 
-import java.lang.Math;
 import java.util.ArrayList;
 
 public class Solution {

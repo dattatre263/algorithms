@@ -1,18 +1,15 @@
 package algospecialization.graphsearch.week1;
 
-import static algospecialization.graphsearch.datastructure.Graph.buildGraph;
-import static algospecialization.graphsearch.datastructure.Graph.getNumberOfVertices;
-
 import algospecialization.graphsearch.datastructure.Graph;
 import algospecialization.graphsearch.datastructure.Graph.Edge;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
+import static algospecialization.graphsearch.datastructure.Graph.buildGraph;
+import static algospecialization.graphsearch.datastructure.Graph.getNumberOfVertices;
 
 public class Kosaraju {
   private boolean[] explored;

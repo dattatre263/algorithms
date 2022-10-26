@@ -1,16 +1,17 @@
 package algospecialization.greedyandspanningtrees.week2;
 
-import static java.lang.Integer.parseInt;
-
 import algospecialization.greedyandspanningtrees.datastructure.Edge;
 import algospecialization.greedyandspanningtrees.datastructure.Graph;
 import algospecialization.greedyandspanningtrees.datastructure.Key;
 import algospecialization.greedyandspanningtrees.datastructure.UnionFind;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.PriorityQueue;
+
+import static java.lang.Integer.parseInt;
 
 public class ClusteringKruskal {
   Graph graph;

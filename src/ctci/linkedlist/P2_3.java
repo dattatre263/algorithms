@@ -1,7 +1,6 @@
 package ctci.linkedlist;
 
 import ctci.library.LinkedListNode;
-import java.util.Random;
 
 public class P2_3 {
 

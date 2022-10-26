@@ -1,7 +1,5 @@
 package algospecialization.graphsearch.datastructure;
 
-import java.util.Comparator;
-
 public class Heap<T extends Comparable<T>> {
 
   private T[] heapArray;

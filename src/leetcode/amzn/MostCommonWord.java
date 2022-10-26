@@ -1,7 +1,6 @@
 package leetcode.amzn;
 
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 
 public class MostCommonWord {

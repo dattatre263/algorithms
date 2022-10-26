@@ -1,11 +1,6 @@
 package leetcode.amzn.mock.seven;
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Set;
+import java.util.*;
 
 public class Solution1 {
 

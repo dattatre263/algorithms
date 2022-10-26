@@ -1,7 +1,5 @@
 package leetcode.arrays;
 
-import java.util.Scanner;
-
 public class MinimumBribes {
   static int[] aux;
 

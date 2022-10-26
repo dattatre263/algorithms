@@ -1,7 +1,5 @@
 package leetcode.amzn.mock.six;
 
-import java.util.PriorityQueue;
-
 public class RectangleOverlap {
   public boolean isRectangleOverlap(int[] rec1, int[] rec2) {
 

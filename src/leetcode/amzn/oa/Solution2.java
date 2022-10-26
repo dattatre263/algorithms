@@ -18,6 +18,7 @@ public class Solution2 {
         }
       }
     }
+    return null;
   }
 
   private static void validate(List<String> commands) {

@@ -1,9 +1,5 @@
 package leetcode.amzn.treesgraphs;
 
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
-
 class SymmetricTree {
 
   public boolean isSymmetric(TreeNode root) {

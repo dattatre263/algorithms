@@ -1,6 +1,7 @@
 package algospecialization.divideandconquer.week2;
 
 import edu.princeton.cs.algs4.Point2D;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;

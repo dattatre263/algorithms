@@ -1,7 +1,6 @@
 package algospecialization.divideandconquer.week1;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.math.BigInteger;

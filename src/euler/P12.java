@@ -1,6 +1,5 @@
 package euler;
 
-import org.omg.CORBA.INTERNAL;
 
 public class P12 {
 

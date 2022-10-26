@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.List;
-
 public class SwapPairs {
   static class ListNode {
     int val;
